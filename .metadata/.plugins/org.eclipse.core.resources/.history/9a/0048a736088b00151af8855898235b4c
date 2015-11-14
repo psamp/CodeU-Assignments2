@@ -1,0 +1,29 @@
+package com.psamp.encrypt;
+
+import java.util.ArrayList;
+
+class Chalkboard {
+	
+	private char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's',
+			't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	
+	private char[] cryptabet = { 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's',
+			't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c' };
+	
+	String shift(String str) {
+		
+		ArrayList<Object> alpha = new ArrayList<Object>();
+		alpha.add(alphabet);
+		
+		ArrayList<Object> crypta = new ArrayList<Object>();
+		crypta.add(cryptabet);
+		
+		char[] word = str.toLowerCase().toCharArray();
+		for (int i = 0; i < alphabet.length; i++) {
+			word[i] = cryptabet[i];
+		}
+		
+		return String.valueOf(word);
+	}
+
+}

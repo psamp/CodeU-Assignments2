@@ -1,0 +1,11 @@
+package com.psamp.encrypt;
+
+abstract class Encryptor {
+	
+	String encrypt(){
+		return this.getClass() + " | ";
+	}
+
+	String abstract encrypt(String str, int shift);
+
+}

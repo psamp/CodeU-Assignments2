@@ -1,0 +1,26 @@
+package com.psamp.encrypt;
+
+import java.util.HashMap;
+import java.util.Map;
+
+class Chalkboard {
+	
+	private char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's',
+			't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	
+	private char[] cryptabet = { 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's',
+			't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c' };
+	
+	String shift(String str) {
+		char[] word = str.toLowerCase().toCharArray();
+		
+		Map<Character, Character> alphaToCrypta = new HashMap<Character, Character>();
+		
+		for (int i = 0; i < Math.min(alphabet.length, cryptabet.length); i++) {
+			alphaToCrypta.put(alphabet[i], cryptabet[i]);
+		}
+		
+		return String.valueOf(word);
+	}
+
+}

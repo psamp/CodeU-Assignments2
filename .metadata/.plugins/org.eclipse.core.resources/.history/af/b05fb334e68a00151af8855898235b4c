@@ -1,0 +1,23 @@
+package com.psamp.encrypt;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class CaesarEncryptorTest {
+	Encryptor caesar;
+
+	@Before
+	public void setUp() throws Exception {
+		caesar = new CaesarEncryptor();
+	}
+
+	@Test
+	public void testEncrypt() {
+		String expected = "def";
+		String actual = caesar.encrypt("abc");
+		assertEquals(true, actual.contains(expected));
+	}
+
+}

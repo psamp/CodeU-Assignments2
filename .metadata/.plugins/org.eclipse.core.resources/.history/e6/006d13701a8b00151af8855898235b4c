@@ -1,0 +1,87 @@
+package com.psamp.encrypt;
+
+import java.util.HashMap;
+import java.util.Map;
+
+class CaesarEncryptor extends Encryptor {
+	private char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r',
+			's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+	private char[] cryptabet = { 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u',
+			'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2'};
+	private Map<Character, Character> alphaNumToCrypta;
+	private Map<Character, Character> cryptaToAlphaNum;
+
+	private void fillMap() {
+		alphaNumToCrypta = new HashMap<Character, Character>();
+		cryptaToAlphaNum = new HashMap<Character, Character>();
+
+		for (int i = 0; i < Math.min(alphabet.length, cryptabet.length); i++) {
+			alphaNumToCrypta.put(alphabet[i], cryptabet[i]);
+			cryptaToAlphaNum.put(cryptabet[i], alphabet[i]);
+		}
+	}
+
+	String encrypt(String str) {
+		this.fillMap();
+		char[] word = str.toLowerCase().toCharArray();
+
+		for (int i = 0; i < word.length; i++) {
+			System.out.println(word[i]);
+
+			if ( (word[i] > 76 && word[i] < 123) || (word[i] > 47 && word[i] < 58) ) {
+				word[i] = alphaNumToCrypta.get(word[i]);
+			}
+			System.out.println(word[i]);
+		}
+
+		return String.valueOf(word);
+	}
+
+	String decrypt(String str) {
+		this.fillMap();
+		char[] word = str.toLowerCase().toCharArray();
+
+		for (int i = 0; i < word.length; i++) {
+
+			if ( (word[i] > 96 && word[i] < 123) ) {
+				System.out.println(cryptaToAlphaNum.get(word[i]));
+//				word[i] = cryptaToAlphaNum.get(word[i]);
+
+			}
+		}
+
+		return String.valueOf(word);
+	}
+
+	// String encrypt(String str) {
+	//
+	// char[] characters = str.toLowerCase().toCharArray();
+	//
+	// for (int i = 0; i < characters.length; i++) {
+	// if ((characters[i] >= 97 && characters[i] <= 122) || (characters[i] >= 48
+	// && characters[i] <= 57)) {
+	// int shift = characters[i] + 3;
+	// characters[i] = (char) shift;
+	// }
+	// }
+	//
+	// return super.header() + String.valueOf(characters);
+	// }
+
+	// @Override
+	// String decrypt(String caesar) {
+	//
+	// char[] characters = caesar.toLowerCase().trim().toCharArray();
+	//
+	// for (int i = 0; i < characters.length; i++) {
+	// if ((characters[i] >= 97 && characters[i] <= 122) || (characters[i] >= 48
+	// && characters[i] <= 57)) {
+	// int shift = characters[i] - 3;
+	// characters[i] = (char) shift;
+	// }
+	// }
+	//
+	// return super.header() + String.valueOf(characters);
+	// }
+
+}
