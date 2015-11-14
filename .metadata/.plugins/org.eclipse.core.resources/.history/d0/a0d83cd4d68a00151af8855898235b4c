@@ -1,0 +1,21 @@
+package com.psamp.encrypt;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class BasicEncryptorTest {
+
+	@Before
+	public void setUp() throws Exception {
+		BasicEncryptor basic = new BasicEncryptor();
+	}
+
+	@Test
+	public void encrypt() {
+		String expected = "OLLEH"
+		String actual = basic.
+	}
+
+}

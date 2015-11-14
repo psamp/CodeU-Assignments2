@@ -1,0 +1,11 @@
+package com.psamp.encrypt;
+
+class BasicEncryptor extends Encryptor {
+
+	@Override
+	String encrypt(String str) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

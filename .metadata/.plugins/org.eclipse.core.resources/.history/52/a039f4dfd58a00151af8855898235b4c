@@ -1,0 +1,7 @@
+package com.psamp.encrypt;
+
+abstract class Encryptor {
+	
+	String encrypt();
+
+}
