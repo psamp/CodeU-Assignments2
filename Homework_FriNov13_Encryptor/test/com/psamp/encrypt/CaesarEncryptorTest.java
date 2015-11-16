@@ -14,29 +14,39 @@ public class CaesarEncryptorTest {
 	public void setUp() throws Exception {
 		caesar = new CaesarEncryptor();
 	}
-	
-	 @Test
-	 public void testEncrypt() {
-	 String expected = "def1";
-	 String actual = caesar.encrypt("abc1");
-	 assertEquals(true, actual.contains(expected));
-	 }
 
-	 @Test
-	 public void testDecrypt() {
-	 String expected = "abc1";
-	 String actual = caesar.decrypt("def1p");
-	 assertEquals(true, actual.contains(expected));
-	 }
+	@Test
+	public void testEncrypt() {
+		String expected = "def1";
+		String actual = caesar.encrypt("abc1");
+
+		Writeable writeable = (Writeable) caesar;
+
+		writeable.write(actual);
+
+		assertEquals(true, actual.contains(expected));
+	}
+
+	@Test
+	public void testDecrypt() {
+		String expected = "princess";
+		String actual = caesar.decrypt("sulqfhvv");
+
+		assertEquals(true, actual.contains(expected));
+	}
 
 	@Test
 	public void encryptScanner() {
 		Scanner scn = new Scanner(System.in);
 		try {
 			System.out.println("Enter word to encrypt: ");
-			String val = scn.next();
-			scn.close();
-			System.out.println( caesar.encrypt(val) );
+			String response = caesar.encrypt(scn.next());
+			
+			System.out.println(response);
+			
+			Writeable writeable = (Writeable) caesar;
+			writeable.write(response);
+			
 		} finally {
 			scn.close();
 		}

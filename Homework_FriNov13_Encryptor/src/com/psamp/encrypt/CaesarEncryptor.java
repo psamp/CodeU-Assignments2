@@ -3,7 +3,9 @@ package com.psamp.encrypt;
 import java.util.HashMap;
 import java.util.Map;
 
-class CaesarEncryptor extends Encryptor {
+import com.jits.shipping.util.TrackingWriter;
+
+class CaesarEncryptor extends Encryptor implements Writeable {
 	private char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
 			'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 	private char[] cryptabet = { 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
@@ -26,7 +28,7 @@ class CaesarEncryptor extends Encryptor {
 	}
 
 	String encrypt(String str) {
-		char[] word = str.trim().toLowerCase().toCharArray();
+		char[] word = str.toLowerCase().toCharArray();
 
 		for (int i = 0; i < word.length; i++) {
 
@@ -36,7 +38,7 @@ class CaesarEncryptor extends Encryptor {
 			}
 		}
 
-		return super.header() + String.valueOf(word);
+		return super.fullyQualifiedClassName() + String.valueOf(word);
 	}
 
 	String decrypt(String str) {
@@ -51,7 +53,15 @@ class CaesarEncryptor extends Encryptor {
 			}
 		}
 
-		return super.header() + String.valueOf(word);
+		return super.fullyQualifiedClassName() + String.valueOf(word);
+	}
+
+	@Override
+	public void write(String str) {
+
+		TrackingWriter tw = new TrackingWriter("caesar.txt", true);
+		tw.write(str);
+
 	}
 
 	// String encrypt(String str) {

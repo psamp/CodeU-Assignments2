@@ -1,0 +1,11 @@
+package com.psamp.starbuzz;
+
+abstract class Beverage {
+	String description = "Unknown beverage";
+	
+	abstract double cost();
+
+	String getDescription() {
+		return description;
+	}	
+}

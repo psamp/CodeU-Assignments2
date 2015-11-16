@@ -25,6 +25,14 @@ public class BasicEncryptorTest {
 	}
 	
 	@Test
+	public void encryptShiftTest() {
+		String expected = "psonsam";
+		String actual = basic.encrypt("sampson", 3);
+		
+		assertEquals(true, actual.contains(expected));
+	}
+	
+	@Test
 	public void decryptTest() {
 		String expected = "hello";
 		String actual = basic.decrypt("OLLEH");

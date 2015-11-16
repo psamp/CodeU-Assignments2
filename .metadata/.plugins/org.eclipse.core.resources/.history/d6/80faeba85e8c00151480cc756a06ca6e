@@ -1,0 +1,11 @@
+package com.psamp.starbuzz;
+
+abstract class CondimentDecarator extends Beverage {
+
+	@Override
+	double cost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

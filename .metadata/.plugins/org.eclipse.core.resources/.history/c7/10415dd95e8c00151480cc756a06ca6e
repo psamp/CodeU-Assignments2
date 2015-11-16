@@ -1,0 +1,10 @@
+package com.psamp.starbuzz;
+
+class Espresso extends Beverage {
+
+	@Override
+	double cost() {
+		return 1.99;
+	}
+
+}

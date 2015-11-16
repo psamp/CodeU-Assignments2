@@ -1,0 +1,25 @@
+package com.psamp.starbuzz;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.psamp.starbuzz.coffee.Beverage;
+import com.psamp.starbuzz.coffee.Espresso;
+import com.psamp.starbuzz.condiments.Whip;
+
+public class StarBuzz {
+	Beverage bevrage;
+
+	@Before
+	public void setUp() throws Exception {
+		bevrage = Mocha(new Whip(new Espresso()));
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

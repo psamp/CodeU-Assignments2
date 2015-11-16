@@ -1,0 +1,14 @@
+package com.psamp.starbuzz;
+
+class DarkRoast extends Beverage {
+	
+	public DarkRoast() {
+		this.description = "Dark Roast";
+	}
+
+	@Override
+	double cost() {
+		return .89;
+	}
+
+}
