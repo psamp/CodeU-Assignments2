@@ -14,8 +14,6 @@ import com.psamp.fileencryptor.encryption.Encryptor;
 
 class FileEncryptor {
 	private Encryptor encryptor;
-	private Reader reader;
-	private Writer writer;
 
 	public FileEncryptor() {
 		encryptor = new CaesarEncryptor();
@@ -26,10 +24,8 @@ class FileEncryptor {
 		String character = "";
 		File encryptedFile = new File("encrypted" + file.getName());
 
-		try {
-
-			reader = new BufferedReader(new FileReader(file));
-			writer = new BufferedWriter(new FileWriter(encryptedFile));
+		try (Reader reader = new BufferedReader(new FileReader(file));
+				Writer writer = new BufferedWriter(new FileWriter(encryptedFile))) {
 
 			while ((current = reader.read()) != -1) {
 				character = encryptor.encrypt(String.valueOf((char) current));
@@ -40,14 +36,6 @@ class FileEncryptor {
 
 			e.printStackTrace();
 
-		} finally {
-
-			try {
-				reader.close();
-				writer.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 
 		return encryptedFile;
@@ -59,10 +47,8 @@ class FileEncryptor {
 		String character = "";
 		File decryptedFile = new File("decrypted" + file.getName());
 
-		try {
-
-			reader = new BufferedReader(new FileReader(file));
-			writer = new BufferedWriter(new FileWriter(decryptedFile));
+		try (Reader reader = new BufferedReader(new FileReader(file));
+				Writer writer = new BufferedWriter(new FileWriter(decryptedFile))) {
 
 			while ((current = reader.read()) != -1) {
 				character = encryptor.decrypt(String.valueOf((char) current));
@@ -73,14 +59,6 @@ class FileEncryptor {
 
 			e.printStackTrace();
 
-		} finally {
-
-			try {
-				reader.close();
-				writer.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 
 		return decryptedFile;

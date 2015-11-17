@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,8 +14,6 @@ public class FileEncryptorTest {
 	private File fileQuickBrownFox;
 	private File fileDEFG;
 	private FileEncryptor fe;
-	private BufferedReader readerQuickBrownFox;
-	private BufferedReader readerDEFG;
 
 	@Before
 	public void setUp() throws Exception {
@@ -24,15 +21,6 @@ public class FileEncryptorTest {
 
 		fileQuickBrownFox = new File("file.txt");
 		fileDEFG = new File("defg.txt");
-
-		readerQuickBrownFox = new BufferedReader(new FileReader(fe.encryptFile(fileQuickBrownFox)));
-		readerDEFG = new BufferedReader(new FileReader(fe.decryptFile(fileDEFG)));
-	}
-
-	@After
-	public void tearDown() throws Exception {
-		readerQuickBrownFox.close();
-		readerDEFG.close();
 	}
 
 	@Test
@@ -41,7 +29,7 @@ public class FileEncryptorTest {
 		String line = null;
 		StringBuilder sb = new StringBuilder();
 
-		try {
+		try(BufferedReader readerQuickBrownFox = new BufferedReader(new FileReader(fe.encryptFile(fileQuickBrownFox)))) {
 			while ((line = readerQuickBrownFox.readLine()) != null) {
 				sb.append(line);
 			}
@@ -61,7 +49,7 @@ public class FileEncryptorTest {
 		String line = null;
 		StringBuilder sb = new StringBuilder();
 
-		try {
+		try(BufferedReader readerDEFG = new BufferedReader(new FileReader(fe.decryptFile(fileDEFG)))) {
 			while ((line = readerDEFG.readLine()) != null) {
 				sb.append(line);
 			}
