@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BasicEncryptorTest" project="Homework_FriNov13_Encryptor" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.psamp.encrypt.BasicEncryptorTest" time="2.406">
-    <testcase name="decryptTest" classname="com.psamp.encrypt.BasicEncryptorTest" time="0.0"/>
-    <testcase name="encryptTest" classname="com.psamp.encrypt.BasicEncryptorTest" time="0.0"/>
-    <testcase name="encryptScanner" classname="com.psamp.encrypt.BasicEncryptorTest" time="2.404"/>
-    <testcase name="encryptShiftTest" classname="com.psamp.encrypt.BasicEncryptorTest" time="0.002"/>
-  </testsuite>
-</testrun>

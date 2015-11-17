@@ -1,0 +1,23 @@
+package com.psamp.fileencryptor;
+
+import java.io.File;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class FileEncryptorTest {
+	private File file;
+	private FileEncryptor fe;
+
+	@Before
+	public void setUp() throws Exception {
+		fe = new FileEncryptor();
+		file = new File("file.txt");
+	}
+
+	@Test
+	public void testEncryptFile() {
+		fe.encryptFile(file);
+	}
+
+}

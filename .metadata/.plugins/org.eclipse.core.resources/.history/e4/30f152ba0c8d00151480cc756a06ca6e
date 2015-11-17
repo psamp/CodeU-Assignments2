@@ -1,0 +1,43 @@
+package com.psamp.fileencryptor;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import com.psamp.fileencryptor.encryption.CaesarEncryptor;
+import com.psamp.fileencryptor.encryption.Encryptor;
+
+class FileEncryptor {
+	Encryptor encryptor;
+	
+	public FileEncryptor() {
+		encryptor = new CaesarEncryptor();
+	}
+
+	File encryptFile(File file) {
+		Reader reader = null;
+		int current = 0;
+		
+		try {
+			reader = new BufferedReader(new FileReader(file));
+			while ((current = reader.read()) != -1) {
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return null;
+
+	}
+
+}

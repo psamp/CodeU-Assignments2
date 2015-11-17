@@ -1,0 +1,51 @@
+package com.psamp.fileencryptor;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class FileEncryptorTest {
+	private File file;
+	private FileEncryptor fe;
+	private BufferedReader reader;
+
+	@Before
+	public void setUp() throws Exception {
+		fe = new FileEncryptor();
+		file = new File("file.txt");
+		reader = new BufferedReader(new FileReader(fe.encryptFile(file)));
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		reader.close();
+	}
+
+	@Test
+	public void testEncryptFile() {
+		
+		String line = null;
+		StringBuilder sb = new StringBuilder();
+		String ls = System.getProperty("line.separator");
+		
+		try {
+			while((line = reader.readLine()) != null ) {
+				sb.append(line);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		String expected = "wkh txlfn eurzq ira";
+		String actual = "";
+		
+		System.out.println(actual);
+	}
+
+}

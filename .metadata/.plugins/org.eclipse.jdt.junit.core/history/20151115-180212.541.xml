@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CaesarEncryptorTest" project="Homework_FriNov13_Encryptor" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.psamp.encrypt.CaesarEncryptorTest" time="3.019">
-    <testcase name="testEncrypt" classname="com.psamp.encrypt.CaesarEncryptorTest" time="0.0"/>
-    <testcase name="encryptScanner" classname="com.psamp.encrypt.CaesarEncryptorTest" time="3.017"/>
-    <testcase name="testDecrypt" classname="com.psamp.encrypt.CaesarEncryptorTest" time="0.002"/>
-  </testsuite>
-</testrun>
