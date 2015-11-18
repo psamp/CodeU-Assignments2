@@ -1,0 +1,8 @@
+package com.psamp.auto;
+
+enum Gender {
+	FEMALE,
+	MALE,
+	NUNYA
+
+}

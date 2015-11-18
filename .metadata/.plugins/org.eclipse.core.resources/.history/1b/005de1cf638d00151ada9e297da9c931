@@ -1,0 +1,21 @@
+package com.psamp.auto;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AutoPolicy {
+	double cost;
+	Map<String, Integer> priceTiers = new HashMap<String, Integer>();
+
+	
+	public AutoPolicy() {
+	}
+
+
+
+
+	double getCost() {
+		return this.cost;
+	}
+
+}

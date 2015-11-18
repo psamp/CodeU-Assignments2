@@ -1,0 +1,9 @@
+package com.psamp.roadsys;
+
+class Interstate extends Road {
+
+	public Interstate(int number) {
+		super(number);
+	}
+
+}

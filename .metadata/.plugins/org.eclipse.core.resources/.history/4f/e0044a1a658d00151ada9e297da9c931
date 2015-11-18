@@ -1,0 +1,44 @@
+package com.psamp.auto;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AutoPolicy {
+	double cost;
+	Map<Integer, Integer> priceTiers = new HashMap<Integer, Integer>();
+	
+	private void populatePriceTiers() {
+		priceTiers.put(1, 1000);
+		priceTiers.put(2, 800);
+		priceTiers.put(3, 600);
+		priceTiers.put(4, 400);
+		priceTiers.put(5, 200);
+	}
+
+	
+	public AutoPolicy(int age, Gender gender) {
+		this.populatePriceTiers();
+		this.getCost();
+	}
+	
+	private double calculateCost(int age, Gender gender) {
+		double rtn = 0;
+		
+		if(age > 15 && age < 100) {
+			try {
+				throw new AgeException("Policy holder must be over 15 and under 100.", new IllegalArgumentException());
+			} catch (AgeException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+
+
+
+	double getCost() {
+		return this.cost;
+	}
+
+}

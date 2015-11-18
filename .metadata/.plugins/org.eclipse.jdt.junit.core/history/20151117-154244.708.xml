@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DriverTest" project="Lab18.1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.psamp.auto.DriverTest" time="0.0">
+    <testcase name="testAutoPolicyCost" classname="com.psamp.auto.DriverTest" time="0.0"/>
+  </testsuite>
+</testrun>

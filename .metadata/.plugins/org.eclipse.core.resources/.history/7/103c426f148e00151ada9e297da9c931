@@ -1,0 +1,11 @@
+package com.psamp.roadsys;
+
+public abstract class Road {
+	private Identifier identifier;
+	private int number;
+	private Orientation orientation;
+	private Location generalLocation;
+	
+	abstract determineOrientation(int number);
+
+}

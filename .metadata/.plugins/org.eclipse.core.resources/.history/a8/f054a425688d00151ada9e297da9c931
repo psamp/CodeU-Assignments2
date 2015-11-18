@@ -1,0 +1,66 @@
+package com.psamp.auto;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AutoPolicy {
+	double cost;
+	Map<Integer, Integer> priceTiers = new HashMap<Integer, Integer>();
+	
+	private void populatePriceTiers() {
+		priceTiers.put(1, 1000);
+		priceTiers.put(2, 800);
+		priceTiers.put(3, 600);
+		priceTiers.put(4, 400);
+		priceTiers.put(5, 200);
+	}
+
+	
+	AutoPolicy(int age, Gender gender) {
+		this.populatePriceTiers();
+		try {
+			this.setCost(this.calculateBaseCost(age, gender) += this.calculateAdditional(gender));
+		} catch (AgeException e) {
+			e.printStackTrace();
+		}
+	}
+
+	double calculateBaseCost(int age, Gender gender) throws AgeException {
+		double rtn = 0;
+		
+		if(age < 15 && age > 100) {
+				throw new AgeException("Policy holder must be over 15 and under 100.", new IllegalArgumentException());
+		} else if(age < 25) {
+			rtn = priceTiers.get(1);
+		} else if(age >= 25 && age <= 30) {
+			rtn = priceTiers.get(2);
+		} else if(age > 31 && age <= 40) {
+			rtn = priceTiers.get(3);
+		} else if(age >= 41 && age <= 50) {
+			rtn = priceTiers.get(4);
+		} else {
+			rtn = priceTiers.get(5);
+		}
+		
+		return rtn;
+	}
+	
+	double calculateAdditional(Gender gender) throws AgeException {
+		double rtn = 0;
+		
+		if(gender == Gender.MALE) {
+			rtn = this.getCost() * 0.1;
+		}
+		
+		return rtn;
+	}
+
+	private void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	double getCost() {
+		return this.cost;
+	}
+
+}

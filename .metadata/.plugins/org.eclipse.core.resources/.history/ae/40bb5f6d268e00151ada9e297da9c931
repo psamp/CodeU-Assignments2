@@ -1,0 +1,9 @@
+package com.psamp.roadsys;
+
+public class Route extends Road {
+
+	public Route(int number) {
+		super(number);
+	}
+	
+}

@@ -1,0 +1,66 @@
+package com.psamp.roadsys;
+
+ abstract class Road {
+	private Identifier identifier;
+	private int number;
+	private Orientation orientation;
+	private Location generalLocation;
+	
+	public Road(String ident, int num) {
+		this.setOrientation(this.determineOrientation(num));
+	}
+	
+	Orientation determineOrientation(int num){
+		Orientation rtn = null;
+		if(num % 2 == 0) {
+			rtn = Orientation.EAST_WEST;
+		} else {
+			rtn = Orientation.NORTH_SOUTH;
+		}
+		
+		return rtn;
+	}
+	
+	
+
+	 Identifier getIdentifier() {
+		return identifier;
+	}
+
+	private void setIdentifier(Identifier identifier) {
+		this.identifier = identifier;
+	}
+
+	 int getNumber() {
+		return number;
+	}
+
+	private void setNumber(int number) {
+		this.number = number;
+	}
+
+	 Orientation getOrientation() {
+		return orientation;
+	}
+
+	 private void setOrientation(Orientation orientation) {
+		this.orientation = orientation;
+	}
+
+	 Location getGeneralLocation() {
+		return generalLocation;
+	}
+
+	private void setGeneralLocation(Location generalLocation) {
+		this.generalLocation = generalLocation;
+	}
+
+	public void determineIfRoadNumberIsValid(int num) {
+		if(num > 0 || num <= 99) {
+			
+		} else {
+			
+		}
+		
+	}
+}

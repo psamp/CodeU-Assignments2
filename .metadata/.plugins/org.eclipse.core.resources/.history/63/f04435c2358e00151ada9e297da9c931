@@ -1,0 +1,27 @@
+package com.psamp.roadsys;
+
+class Interstate extends Road {
+
+	public Interstate(int number) {
+		super(number);
+		this.setIdentifier(Identifier.I);
+	}
+
+	@Override
+	Location determineLocation(int i) {
+		Location rtn = null;
+		
+		if(this.getNumber() >= 50 && this.getNumber() <= 99 && this.getOrientation() == Orientation.EAST_WEST) {
+			rtn =  Location.NORTH;
+		} else if(this.getNumber() >= 1 && this.getNumber() <= 49 && this.getOrientation() == Orientation.EAST_WEST) {
+			rtn = Location.SOUTH;
+		} else if(this.getNumber() >= 50 && this.getNumber() <= 99 && this.getOrientation() == Orientation.NORTH_SOUTH) {
+			rtn = Location.EAST;
+		} else if(this.getNumber() >= 1 && this.getNumber() <= 49 && this.getOrientation() == Orientation.NORTH_SOUTH) {
+			rtn = Location.WEST;
+		}
+		
+		return rtn;
+	}
+
+}

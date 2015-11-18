@@ -1,0 +1,10 @@
+package com.psamp.auto;
+
+class Driver {
+	int age;
+	int drivingExperience;
+	AutoPolicy policy;
+	Gender gender;
+	
+
+}

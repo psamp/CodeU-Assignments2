@@ -1,0 +1,22 @@
+package com.psamp.auto;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class DriverTest {
+	private Driver driver;
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new Driver(18, "Female", 2);
+	}
+
+	@Test
+	public void testAutoPolicyCost() {
+		String expected = 990;
+		String actual = driver.getAutoPolicy().getCost();
+	}
+
+}

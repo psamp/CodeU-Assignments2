@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AutoPolicyTest" project="Lab18.1" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.psamp.auto.AutoPolicyTest" time="0.002">
+    <testcase name="testCalculateAdditionalForMaleCustomersWithoutFactoringInExperience" classname="com.psamp.auto.AutoPolicyTest" time="0.001"/>
+    <testcase name="testExperienceDeductible" classname="com.psamp.auto.AutoPolicyTest" time="0.0"/>
+    <testcase name="testCalculateBaseCost" classname="com.psamp.auto.AutoPolicyTest" time="0.0"/>
+    <testcase name="testCalculateMultipleDriverDiscount" classname="com.psamp.auto.AutoPolicyTest" time="0.0"/>
+    <testcase name="testAutoPolicyCost" classname="com.psamp.auto.AutoPolicyTest" time="0.0"/>
+    <testcase name="testInvalidAge" classname="com.psamp.auto.AutoPolicyTest" time="0.001"/>
+  </testsuite>
+</testrun>

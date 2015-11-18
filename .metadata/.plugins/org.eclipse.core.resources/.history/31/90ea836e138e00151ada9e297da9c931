@@ -1,0 +1,22 @@
+package com.psamp.roadsys;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class RoadTest {
+	Road interstateEven;
+
+	@Before
+	public void setUp() throws Exception {
+		interstate = new Interstate("I", 40);
+		interstate = new Interstate("I", 5);
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,44 @@
+package com.psamp.auto;
+
+class Driver {
+	int age;
+	int drivingExperience;
+	AutoPolicy policy;
+	Gender gender;
+	
+	
+	public Driver(int age, int drivingExperience, Gender gender) {
+		this.age = age;
+		this.drivingExperience = drivingExperience;
+		this.gender = gender;
+	}
+	
+	int getAge() {
+		return age;
+	}
+	private void setAge(int age) {
+		this.age = age;
+	}
+	int getDrivingExperience() {
+		return drivingExperience;
+	}
+	private void setDrivingExperience(int drivingExperience) {
+		this.drivingExperience = drivingExperience;
+	}
+	AutoPolicy getPolicy() {
+		return policy;
+	}
+	private void setPolicy(AutoPolicy policy) {
+		this.policy = policy;
+	}
+	Gender getGender() {
+		return gender;
+	}
+	void setGender(Gender gender) {
+		this.gender = gender;
+	}
+	
+	
+	
+
+}
