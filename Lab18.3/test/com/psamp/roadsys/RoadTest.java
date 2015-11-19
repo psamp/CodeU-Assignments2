@@ -66,5 +66,11 @@ public class RoadTest {
 		assertEquals(Identifier.I, interstateEven.getIdentifier());
 		assertEquals(Identifier.US, routeOdd.getIdentifier());
 	}
+	
+	@Test
+	public void testToString() {
+		assertEquals("I-40", interstateEven.toString());
+		assertEquals("US-5", routeOdd.toString());
+	}
 
 }

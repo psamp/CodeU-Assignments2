@@ -38,6 +38,10 @@ abstract class Road {
 		}
 		return rtn;
 	}
+	
+	public String toString() {
+		return this.getIdentifier() + "-" + this.getNumber();
+	}
 
 	Identifier getIdentifier() {
 		return identifier;
