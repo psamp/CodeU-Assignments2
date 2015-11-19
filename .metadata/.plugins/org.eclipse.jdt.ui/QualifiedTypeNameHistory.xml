@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.junit.internal.runners.model.EachTestNotifier"/>
 <fullyQualifiedTypeName name="com.psamp.starbuzz.coffee.Beverage"/>
 <fullyQualifiedTypeName name="com.psamp.starbuzz.coffee.Espresso"/>
@@ -28,4 +27,14 @@
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.lang.AssertionError"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="org.junit.Rule"/>
+<fullyQualifiedTypeName name="com.psamp.auto.AgeException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.psamp.auto.AutoPolicy"/>
+<fullyQualifiedTypeName name="org.junit.rules.ExpectedException"/>
+<fullyQualifiedTypeName name="com.psamp.roadsys.RoadNumberException"/>
+<fullyQualifiedTypeName name="com.psamp.roadsys.Identifier"/>
+<fullyQualifiedTypeName name="com.psamp.roadsys.Location"/>
+<fullyQualifiedTypeName name="com.psamp.roadsys.Orientation"/>
 </qualifiedTypeNameHistroy>

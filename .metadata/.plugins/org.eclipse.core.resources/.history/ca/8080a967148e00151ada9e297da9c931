@@ -1,5 +1,0 @@
-package com.psamp.roadsys;
-
-public abstract class Road {
-
-}

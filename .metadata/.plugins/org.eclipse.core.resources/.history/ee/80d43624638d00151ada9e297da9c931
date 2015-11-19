@@ -1,7 +1,0 @@
-package com.psamp.auto;
-
-public class AutoPolicy {
-	double cost;
-	Map<String, Integer> priceTiers = new HashMap<String, Integer>();
-
-}
