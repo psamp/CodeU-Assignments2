@@ -1,5 +1,0 @@
-package com.psamp.encrypt;
-
-interface Writeable {
-	String write(String str);
-}

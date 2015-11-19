@@ -1,7 +1,0 @@
-package com.psamp.roadsys;
-
-enum Orientation {
-	NORTH-SOUTH,
-	EAST-WEST
-
-}

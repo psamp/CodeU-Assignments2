@@ -1,8 +1,0 @@
-package com.psamp.encrypt;
-
-abstract class Encryptor {
-	
-	abstract String encrypt(String str);
-	abstract String encrypt(String str, int shift);
-
-}

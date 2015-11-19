@@ -1,5 +1,0 @@
-package com.psamp.starbuzz;
-
-abstract class Beverage {
-
-}

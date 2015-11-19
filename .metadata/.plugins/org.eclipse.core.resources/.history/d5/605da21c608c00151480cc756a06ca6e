@@ -1,7 +1,0 @@
-package com.psamp.starbuzz;
-
-abstract class CondimentDecarator extends Beverage {
-	
-	abstract String getDescription();
-
-}

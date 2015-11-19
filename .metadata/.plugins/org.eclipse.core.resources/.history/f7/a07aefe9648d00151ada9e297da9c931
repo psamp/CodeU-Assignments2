@@ -1,5 +1,0 @@
-package com.psamp.auto;
-
-public class AgeException extends Exception {
-
-}
