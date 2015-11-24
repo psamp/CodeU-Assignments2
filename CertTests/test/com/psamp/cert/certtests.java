@@ -32,14 +32,20 @@ public class certtests {
 	public void testOne() {
 		int x = 0;
 		int y = 11;
-//		do {
-//		} while (x++ < y);
-//
-//		System.out.println(x);
-		
+		do {
+		} while (x++ < y);		
 		while (x++ < y){
 			System.out.println(x);
-		};
+		}
+	}
+	
+	@Test
+	public void testTwo() {
+		String s = "MINIMUM";
+		
+		System.out.println(s.length());
+		System.out.println(s.substring(4, 7));
+		System.out.println(s.substring(0, 3));
 	}
 
 }
